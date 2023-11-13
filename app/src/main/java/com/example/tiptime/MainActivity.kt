@@ -75,6 +75,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+//function that shows the UI, includes state
 @Composable
 fun TipTimeLayout() {
     var amountInput by remember { mutableStateOf("") }
@@ -139,6 +140,7 @@ fun TipTimeLayout() {
     }
 }
 
+//stateless function that contains the text fields and text for the app
 @Composable
 fun EditNumberField(
     @StringRes label: Int,
@@ -162,6 +164,7 @@ fun EditNumberField(
 
 }
 
+//includes the switch and its text to round up the tip
 @Composable
 fun RoundTheTipRow(
     roundUp: Boolean,
@@ -186,7 +189,7 @@ fun RoundTheTipRow(
 }
 
 /**
- * Calculates the tip based on the user input and format the tip amount
+ * Calculates the tip and round up amount based on the user input and format the tip amount
  * according to the local currency.
  * Example would be "$10.00".
  */
